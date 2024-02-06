@@ -107,7 +107,7 @@ export function DataTable<TData, TValue>({
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
+            <TableRow  key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
                   <TableHead key={header.id}>
@@ -127,6 +127,7 @@ export function DataTable<TData, TValue>({
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
               <TableRow
+                className=""
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
               >
